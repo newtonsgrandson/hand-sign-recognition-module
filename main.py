@@ -1,6 +1,7 @@
 from libraries import *
 
 #To calculate FPS
+
 pTime = 0
 cTime = 0
 detector = handDetector()
