@@ -69,8 +69,5 @@ class preprocess:
         return pd.DataFrame(new_y)
 
     def flat(self, y = pd.DataFrame):
-        flatted = []
-        for i in range(y.iloc[:,0].__len__()):
-            for j in range(y.iloc[0, :].__len__()):
-                flatted.append(y.iloc[i, j])
+        flatted = [y.iloc[i, j] for i in range(y.iloc[:,0].__len__()) for j in range(y.iloc[0, :].__len__())]
         return flatted
